@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Template em CSS</title>
+    <meta charset="utf-8">
+
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      /* Style the header */
+      header {
+        background-color: #666;
+        padding: 30px;
+        font-size: 35px;
+        color: white;
+      }
+
+      /* Crie duas colunas/caixas que flutuam uma ao lado da outra */
+      nav {
+        float: left; /*fluata do lado esquerdo*/
+        height: 300px; /* apenas para demonstração, deve ser removido */
+        background: #ccc;
+        padding: 20px;
+      }
+
+      /* Style para a lista dentro do menu */
+      nav ul {
+        list-style-type: none; 
+        padding: 0;
+      }
+
+      article {
+        padding: 20px;
+        background-color: #f1f1f1;
+        height: 300px; /* apenas para demonstração, deve ser removido */
+      }
+
+      section{
+        padding: 20px;
+        background-color: #eee;
+        width: 800px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  
+  <body>
+    <h2>Exemplo de Layout</h2>
+    <header>
+      <h2>Cidades</h2>
+    </header>
+
+    <section>
+      <nav>
+        <ul>
+          <li><a href="https://brasilescola.uol.com.br/geografia/brasilia.htm">Brasilia</a></li>
+          <li><a href="http://www.saocarlos.sp.gov.br/index.php/conheca-sao-carlos/115268-a-cidade-de-sao-carlos.html">São Carlos</a></li>
+          <li><a href="https://brasilescola.uol.com.br/brasil/cidade-de-sao-paulo.htm">São Paulo</a></li>
+        </ul>
+      </nav>
+  
+      <article>
+        <h1>Brasília</h1>
+        <p>Brasília é a capital do Brasil. Está localizada na região do Centro-Oeste do país, no Planalto Central, em uma região de clima Tropical e paisagem de Cerrado.</p>
+        <p>A cidade de Brasília é a sede do governo federal do Brasil. Ela possui uma grande importância política e histórica para o país.</p>
+      </article>
+    </section>
+  </body>
+</html>
+
+

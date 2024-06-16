@@ -1,0 +1,1 @@
+# exemplo_galeria_imagens_responsivo

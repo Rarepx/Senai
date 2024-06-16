@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>Template em CSS</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 0;
+}
+
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+.container {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 20px;
+    }
+
+/* Crie duas colunas/caixas que flutuam uma ao lado da outra */
+nav {
+  float: left;
+  width: 30%;
+  height: 300px; /* apenas para demonstração, deve ser removido */
+  background: #ccc;
+  padding: 20px;
+}
+
+/* Style para a lista dentro do menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+  height: 300px; /* apenas para demonstração, deve ser removido */
+}
+
+section{
+	  flex: 1;
+      padding: 20px;
+      background-color: #eee;
+      margin-right: 20px;
+      margin-bottom: 20px;
+}
+
+aside {
+      flex-basis: 300px;
+      background-color: #ccc;
+      padding: 20px;
+}
+
+/* Style para o rodapé. */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Layout Responsivo - faz com que as duas colunas/caixas se empilhem uma sobre a outra em vez de uma ao lado da outra, em telas pequenas */
+@media (max-width: 600px) {
+  .container {
+        flex-direction: column;
+  }
+  
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+  
+  aside {  
+    flex-basis: auto;
+    margin-top: 20px;
+ }
+}
+</style>
+</head>
+<body>
+
+<h2>Exemplo de Layout</h2>
+<p>Neste exemplo, criamos um cabeçalho, duas colunas/caixas e um rodapé. Em telas menores, as colunas serão empilhadas umas sobre as outras.</p>
+<p>Redimensione a janela do navegador para ver o efeito responsivo</p>
+
+<header>
+  <h2>Cidades</h2>
+</header>
+<div class="container">
+<section>
+  <nav>
+    <ul>
+      <li><a href="https://brasilescola.uol.com.br/geografia/brasilia.htm">Brasilia</a></li>
+      <li><a href="http://www.saocarlos.sp.gov.br/index.php/conheca-sao-carlos/115268-a-cidade-de-sao-carlos.html">São Carlos</a></li>
+      <li><a href="https://brasilescola.uol.com.br/brasil/cidade-de-sao-paulo.htm">São Paulo</a></li>
+    </ul>
+  </nav>
+  
+  <article>
+    <h1>Brasília</h1>
+    <p>Brasília é a capital do Brasil. Está localizada na região do Centro-Oeste do país, no Planalto Central, em uma região de clima Tropical e paisagem de Cerrado.</p>
+    <p>A cidade de Brasília é a sede do governo federal do Brasil. Ela possui uma grande importância política e histórica para o país.</p>
+  </article>
+</section>
+
+    <aside>
+      <h2>Título da coluna flutuante</h2>
+      <p>Neste exemplo, a tag aside é utilizada para criar a coluna flutuante na lateral direita, enquanto.</p>
+    </aside>
+</div>
+<footer>
+  <p>Conteúdo do Rodapé da página.</p>
+</footer>
+
+</body>
+</html>
+
+

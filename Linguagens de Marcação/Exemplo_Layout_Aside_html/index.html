@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<title>Template em CSS</title>
+<meta charset="utf-8">
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 0;
+}
+
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+.container {
+      display: flex;
+      margin: 20px;
+    }
+
+/* Crie duas colunas/caixas que flutuam uma ao lado da outra */
+nav {
+  float: left;
+  width: 30%;
+  height: 300px; /* apenas para demonstração, deve ser removido */
+  background: #ccc;
+  padding: 20px;
+}
+
+/* Style para a lista dentro do menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+  height: 300px; /* apenas para demonstração, deve ser removido */
+}
+
+section{
+  padding: 20px;
+  background-color: #eee;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+aside {
+  float: left;
+  background-color: #ccc;
+  padding: 20px;
+  height: 340px;
+}
+</style>
+</head>
+<body>
+
+<h2>Exemplo de Layout</h2>
+
+<header>
+  <h2>Cidades</h2>
+</header>
+<div class="container">
+<section>
+  <nav>
+    <ul>
+      <li><a href="https://brasilescola.uol.com.br/geografia/brasilia.htm">Brasilia</a></li>
+      <li><a href="http://www.saocarlos.sp.gov.br/index.php/conheca-sao-carlos/115268-a-cidade-de-sao-carlos.html">São Carlos</a></li>
+      <li><a href="https://brasilescola.uol.com.br/brasil/cidade-de-sao-paulo.htm">São Paulo</a></li>
+    </ul>
+  </nav>
+  
+  <article>
+    <h1>Brasília</h1>
+    <p>Brasília é a capital do Brasil. Está localizada na região do Centro-Oeste do país, no Planalto Central, em uma região de clima Tropical e paisagem de Cerrado.</p>
+    <p>A cidade de Brasília é a sede do governo federal do Brasil. Ela possui uma grande importância política e histórica para o país.</p>
+  </article>
+</section>
+
+    <aside>
+      <h2>Título da coluna Lado Direito</h2>
+      <p>Neste exemplo, a tag aside é utilizada para criar a coluna lateral do lado direita.</p>
+    </aside>
+</div>
+
+</body>
+</html>

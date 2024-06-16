@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.container{
+  /*define como um ítem será posicionado para no espaço 
+  disponível dentro de seu container.*/
+  flex: 1;
+  
+  /*flex-wrap define se os itens flexíveis são forçados 
+  a ficarem na mesma linha ou se podem ser quebradas em varias linha
+  wrap: Ocorrerá a quebra de linha se alguns dos itens ultrapassar 
+  a largura do Flex Container. Os itens mais à direita serão deslocados
+   para a linha de baixo;*/
+  flex-wrap: wrap; 
+  
+  /*display:flex; Quando colocamos essa propriedade em um elemento, 
+  esse elemento se torna um flex container, ou seja é possível 
+  manipular os elementos filhos desse flex container 
+  com propriedades novas.*/
+  display: flex; 
+  margin: 0px;
+  background-color: #f1f1f1;
+}
+
+.alinhamentoTexto{
+  margin-top: 30px;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: #f1f1f1;
+  overflow: auto;
+}
+
+li a {
+  display: block;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: #000;
+}
+
+li a:hover {
+  background-color: #555;
+  color: white;
+}
+
+.menu{
+  float: left;
+  width: 25%;
+  background-color: #f1f1f1;
+  
+}
+
+.principal{
+  float: left;
+  width: 75%;
+  padding: 1px 16px;
+  background-color: white;
+}
+
+@media screen and (max-width: 700px) {
+  .menu, .principal {
+    width: 100%;
+    margin: 6px 0;
+  }
+}

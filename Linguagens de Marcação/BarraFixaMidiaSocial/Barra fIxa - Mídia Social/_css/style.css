@@ -1,0 +1,59 @@
+body {
+  margin:0;
+  height:1000px;
+}
+
+.barraDeIcones {
+  position: fixed;
+  top: 50%;
+  /*A propriedade CSS -webkit-transform permite que 
+  os desenvolvedores web transformem um elemento 
+  em um espaço bidimensional (2D) ou tridimensional (3D).*/
+  -webkit-transform: translateY(-80%);
+  /*A propriedade de extensão CSS -ms-transform da 
+  Microsoft fornece uma implementação do módulo CSS 2D 
+  Transforms (usado para funcionar no IE)*/
+  -ms-transform: translateY(-80%);
+  /*A propriedade transform aplica uma transformação 
+  2D ou 3D a um elemento*/
+  transform: translateY(-80%); 
+}
+
+.barraDeIcones a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
+}
+
+.barraDeIcones a:hover {
+  background-color: #000;
+}
+
+.facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+
+.instagram {
+  background: #a46822;
+  color: white;
+}
+
+.youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.conteudo {
+  margin-left: 75px;
+  font-size: 30px;
+}

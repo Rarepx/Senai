@@ -1,0 +1,45 @@
+
+.img_variacao1 {
+  opacity: 0.2;
+}
+
+.img_variacao2 {
+  opacity: 0.5;
+}
+
+.img_variacao3 {
+  opacity: 1;
+}
+
+.formatacaoImagem{
+  width: 250px;
+  height:150px;
+}
+
+/* usado associado ao passar do mouse */
+.imgHover {
+  opacity: 0.5;
+}
+
+.imgHover:hover {
+  opacity: 1.0;
+}
+
+/* trasparência aplicada em div .. perceba a
+transparência é o último valor */
+div {
+  background: rgb(76, 76, 175);
+  padding: 10px;
+}
+
+div.primeiro {
+  background: rgba(76, 76, 175, 0.1);
+}
+
+div.segundo {
+  background: rgba(76, 76, 175, 0.3);
+}
+
+div.terceiro {
+  background: rgba(76, 76, 175, 0.6);
+}

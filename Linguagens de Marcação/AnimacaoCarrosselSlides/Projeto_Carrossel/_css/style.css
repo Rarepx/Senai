@@ -1,0 +1,100 @@
+* {
+   
+   /* A propriedade box-sizing do CSS nos permite incluir o 
+    preenchimento e a borda na largura e altura total de um elemento */
+
+   /* Se você definir box-sizing: border-box; em um elemento, 
+   o preenchimento e a borda são incluídos na largura e na altura */
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }
+
+  /* CARROSSEL SLIDE -- INICIO */
+  .slider_container {
+    margin:  10px 15px;
+    position: relative;
+    width: 70%;
+    height: 500px;
+    /* O display: flex  
+    Quando colocamos essa propriedade em um elemento, 
+    esse elemento se torna um flex container, a partir daí podemos 
+    manipular todos os elementos filhos desse flex container com propriedades novas. */
+    display: flex;
+    align-items: center;
+    /* O objetivo do overflow é fazer com que conteúdos muito grandes possam 
+    caber dentro de uma página através do uso de barras de rolagem. 
+    hidden – Corta o conteúdo que ultrapassa o tamanho da DIV.*/
+    overflow: hidden;
+  }
+  
+  .slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* animation é usado para animar outras propriedades CSS 
+    ease-in-out: realiza a transição com o início e final lentos; */
+    animation: 18s ease-in-out sliding infinite;
+  }
+  
+  .slide {
+    position: relative;
+    min-width: 100%;
+    height: 100%;
+  }
+  
+  .slide.um {
+    background: rgb(255, 244, 234);
+  }
+  .slide.dois {
+    background: rgb(246, 221, 151);
+  }
+  .slide.tres {
+    background:  #ddd;
+  }
+  
+
+   /*
+    A regra @keyframes vai definir as etapas da animação. 
+    Com essa regra vamos informar o início e o final do valor 
+    da propriedade CSS que desejamos animar.
+   */
+  @keyframes sliding {
+    0% {
+      /*
+      a propriedade transform permite manipular visualmente um elemento.
+      A função de translate serve para mover o elemento. 
+      A sintaxe pode ser especifica para um dos eixos x/y (translateX ou translateY)
+      */
+      transform: translateX(0%);
+    }
+    5% {
+      transform: translateX(0%);
+    }
+    35% {
+      transform: translateX(-100%);
+    }
+    45% {
+      transform: translateX(-100%);
+    }
+    70% {
+      transform: translateX(-200%);
+    }
+    80% {
+      transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(-300%);
+      }
+
+  }
+  
+
+  

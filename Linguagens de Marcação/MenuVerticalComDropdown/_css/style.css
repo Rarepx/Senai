@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+.conteudo{
+  /*define como um ítem será posicionado para no espaço 
+  disponível dentro de seu container.*/
+  flex: 1;
+   /*flex-wrap define se os itens flexíveis são forçados 
+  a ficarem na mesma linha ou se podem ser quebradas em varias linha
+  wrap: Ocorrerá a quebra de linha se alguns dos itens ultrapassar 
+  a largura do Flex Container. Os itens mais à direita serão deslocados
+   para a linha de baixo;*/
+  flex-wrap: wrap;
+  display: flex;
+}
+
+/* Navegação lateral fixa, com altura total */
+.menuLateral {
+  float: left;
+  position: relative;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #333;
+  padding-top: 20px;
+}
+
+/* Posição do botão dropdown relativa a a div navegacaoLateral*/
+.botaoDropdown {
+  position: relative;
+}
+
+/* Estilize os links de navegação lateral e o botão dropdown */
+.menuLateral a, .botaoDropdown {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #ccc;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  /* realiza um contorno de uma linha desenhada 
+  fora da borda do elemento. */
+  outline: none; 
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* Quando passar o mouse sobre o elemento */
+.menuLateral a:hover, .botaoDropdown:hover {
+  color: #fff;
+  background-color: #201e1e;
+}
+
+/* Conteúdo principal */
+.principal {
+  float: left;
+  background-color: white;
+  width: 79%;
+  margin-left: 10px;
+  font-size: 20px; /* Texto aumentado para permitir a rolagem */
+  padding: 5px;
+}
+
+.alinhamentoTexto{
+  margin-top: 30px;
+  text-align: justify;
+}
+
+/* Adicione um destaque ao botão dropdown */
+.destaque {
+  background-color: #111;
+  color: white;
+}
+
+/* conteúdo botão dropdown (oculto por padrão).
+Opcional: adicione uma cor de fundo mais clara e alguns
+preenchimento esquerdo para alterar o design do 
+conteúdo suspenso */
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+}
+
+/*seta do botão Dropdown*/
+.seta {
+  display: inline-block;
+  margin-left: 3px;
+  width: 0;
+  height: 2px;
+  border-style: solid;
+  border-width: 5px 5px 0 5px;
+  border-color: #fff transparent transparent transparent;
+}
+
+/* muda a posição da seta*/
+.paraBaixo {
+  transform: rotate(90deg);
+  margin-top: -2px;
+}
+
+.menuDropdown {
+  position: relative;
+  left: 0;
+  width: 100%;
+  background-color: #444;
+  display: none;
+}
+
+.show {
+  display: block;
+} 
+
+.colunaEsquerda{
+  width: 20%;
+  height: auto;
+  background-color: #333;
+}
+
+
+/* Adiciona um comportamento responsivo */
+@media screen and (max-width: 700px) {
+  .menuLateral, .principal{
+    width: 100%;
+    margin: 6px 0;
+  }
+}
+
+

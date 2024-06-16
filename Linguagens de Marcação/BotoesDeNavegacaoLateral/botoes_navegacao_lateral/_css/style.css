@@ -1,0 +1,39 @@
+#menuLateral a {
+  position: absolute;
+  left: -80px;
+  transition: 0.4s;
+  padding: 15px;
+  width: 80px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  border-radius: 0 5px 5px 0;
+}
+
+#menuLateral a:hover {
+  left: 0;
+}
+
+#sobre {
+  top: 20px;
+  background-color: #04AA6D;
+}
+
+#informacoes {
+  top: 80px;
+  background-color: #2196F3;
+}
+
+#projeto {
+  top: 140px;
+  background-color: #f44336;
+}
+
+#contato {
+  top: 200px;
+  background-color: #555
+}
+
+.alinharTexto{
+  margin-left:80px;
+}

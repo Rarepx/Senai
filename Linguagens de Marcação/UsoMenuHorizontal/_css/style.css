@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #666;
+}
+
+.navbar a {
+  float: right;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background-color: #dddddd8c;
+}
+
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 10px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+.container {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 20px;
+    }
+
+.colunaEsquerda {
+  float: left;
+  width: 30%;
+  height: 320px; 
+  background: #ccc;
+  padding: 20px;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+  height: 300px; /* apenas para demonstração, deve ser removido */
+}
+
+section{
+	  flex: 1;
+      padding: 20px;
+      background-color: #eee;
+      margin-right: 20px;
+      margin-bottom: 10px;
+}
+
+aside {
+      flex-basis: 300px;
+      background-color: #ccc;
+      padding: 20px;
+      margin-bottom: 10px;
+}
+
+/* Style para o rodapé. */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+

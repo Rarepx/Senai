@@ -1,0 +1,128 @@
+html {
+    box-sizing: border-box;
+  }
+  
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+  }
+  
+  .sobre {
+    padding: 10px;
+    margin: 0px;
+    /*
+    gradiente de cor
+    exibir transições suaves entre duas ou mais 
+    cores especificadas.
+    background-image: 
+    linear-gradient(direção, cor1, co2, ...);
+    */
+    background-image: linear-gradient(to bottom,#425748,#475d4d,#6a8471);
+    /* background-color: #475d4d; */
+    color: white;
+  }
+
+.alinhadoAoCentro{
+    text-align:center;
+    padding: 10px;
+}
+
+.alinhamentoTextoSobre{
+    text-align:justify;
+    font-size: 18px;
+}
+
+  /* pseuso-elementos ":after" e ":before", 
+são utilizados para inserir um determinado conteúdo 
+antes ou depois de um determinado elemento. */
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  .coluna {
+    float: left;
+    width: 33%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+  }
+  
+  .cartao {
+    /*1 sombra vertical
+      2 sombra horizontal
+      3 borrar
+      4 dissipação da sombra
+      5 cor da sombra
+      */
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2);
+    margin: 4px;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  
+  .container {
+    padding: 0 16px 0 16px;  
+    /* padding-top: 0;
+    padding-right: 16px;
+    padding-bottom: 0px; 
+    padding-left: 16px;*/
+    
+  }
+  
+  .container::after, .linha::after {
+    /*A propriedade content é usada com os 
+    pseudo-elementos ::before e ::after, 
+    para inserir o conteúdo gerado.
+    */
+    content: "";
+    /*clear define se um elemento pode 
+      ter elementos flutuantes ao seu lado 
+      ou se devem ser movidos para abaixo dele;
+    */
+    clear: both;
+    /*permite que o elemento se comporte como 
+    uma tabela
+    */
+    display: table;
+  } 
+  
+  .title {
+    color: grey;
+  }
+  
+  .imagemIdentificacao{
+    width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 340px;
+  }
+  
+
+  .botao {
+    border: none;
+    /* outline-color:red; */
+    /* outline-style: solid; */
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+  }
+  
+  .botao:hover {
+    /* background-color: #555; */
+    opacity: 0.5;
+  }
+
+   
+  @media screen and (max-width: 650px) {
+    .coluna {
+      width: 100%;
+      display: block;
+    }
+  }
