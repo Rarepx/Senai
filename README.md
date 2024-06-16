@@ -3,3 +3,4 @@ Neste repositório está todo o conhecimento que adquiri durante meu tempo no SE
 - Java
 - JavaScript
 - MySQL
+Além dessas linguagens, utilizei frameworks Java como:
