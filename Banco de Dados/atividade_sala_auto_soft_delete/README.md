@@ -1,0 +1,1 @@
+# ativifdade_sala_auto_soft_delete

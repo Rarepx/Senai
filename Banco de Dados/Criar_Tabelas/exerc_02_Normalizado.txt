@@ -1,0 +1,24 @@
+PK(CPFCliente)
+Cliente = {CPFCliente, NomeCliente}
+
+PK(CPFCliente)
+FK(CPFCliente)
+TelefoneDoCliente = {CPFCliente, TelefoneCelular, TelefoneResidencial, TelefoneComercial}
+
+PK(CPFCliente)
+FK(CPFCliente)
+EnderecoDoCliente = {CPFCliente, Estado, Cidade, Bairro, Rua, Número, CEP, Logradouro}
+
+PK(CodMedic)
+FK(IdFabricante)
+Medicamento = {CodMedic, NomeMedic, IdFabricante, DataValidade}
+
+PK(CNPJ)
+Fabricante = {CNPJ, RazaoSocial, NomeFantasial, Email}
+
+PK(CodVenda)
+FK(CPFCliente e CodigoMedic)
+Venda = {CodVenda, DataVenda, CPFCliente, CodigoMedic}
+
+PK(CodVenda e CodMedic)
+ItensVenda = {CodVenda, CodMedic, Quantidade, DataVenda}
