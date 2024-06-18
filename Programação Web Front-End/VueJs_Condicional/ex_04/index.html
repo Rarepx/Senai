@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+
+  <div id="app">
+    <label for="pontuacao">Informe a pontuação:</label>
+    <input type="number" id="pontuacao" v-model="pontuacao" min="0" max="100">
+    <button v-on:click="validarNota">Validar Nota</button>
+  
+    <div v-if="resultado === 'Aprovado'">
+      <p class="aprovado">Aprovado</p>
+    </div>
+    <div v-else-if="resultado === 'Recuperação'">
+      <p class="recuperacao">Recuperação</p>
+    </div>
+    <div v-else-if="resultado === 'Reprovado'">
+      <p class="reprovado">Reprovado</p>
+    </div>
+  </div>
+
+</body>
+</html>

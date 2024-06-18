@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+
+<div id="app">
+  <label for="numeroInicio">Início:</label>
+  <input type="number" id="numeroInicio" v-model="numeroInicio">
+  
+  <label for="numeroFim"> Fim:</label>
+  <input type="number" id="numeroFim" v-model="numeroFim">
+
+  <button v-on:click="gerarPrimos">Gerar Números Primos</button>
+
+  <ul>
+    <li v-for="primo in numerosPrimos" v-on:key="primo">{{ primo }}</li>
+  </ul>
+</div>
+
+</body>
+</html>

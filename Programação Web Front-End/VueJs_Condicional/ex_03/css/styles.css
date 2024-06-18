@@ -1,0 +1,16 @@
+.caixa-de-cor {
+  width: 200px;
+  height: 100px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.verde {
+  background-color: lightgreen;
+}
+
+.vermelho {
+  background-color: lightcoral;
+}

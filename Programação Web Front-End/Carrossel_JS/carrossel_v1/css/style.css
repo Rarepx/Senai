@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+  margin: 2px;
+  padding: 0;
+}
+
+.conteudoDiv {
+  display: flex;
+  max-height: 200px;
+  align-items: center;
+}
+
+.exibirImagem {
+  flex: 1;
+  max-height: 200px; 
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.minhaImagem {
+  display: none;
+}
+
+.minhaImagem img {
+  max-width: 100%;
+  max-height: 200px;
+}
+
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Template em CSS</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="_css/style.css">
+    <link rel="stylesheet" href="_css/media.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" defer></script>
+    <script src="_js/script2.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <h2>Cidades</h2>
+    </header>
+    
+    <div class="container">
+      <section>
+          <div class="tab">
+            <button class="vetorItens guiAtiva" onclick="carregaItem(event, 'Opcao1')">Opcao1</button>
+            <button class="vetorItens" onclick="carregaItem(event, 'Opcao2')">Opcao2</button>
+            <button class="vetorItens" onclick="carregaItem(event, 'Opcao3')">Opcao3</button>
+            <button class="vetorItens" onclick="carregaItem(event, 'Opcao4')">Opcao4</button>
+            <button class="vetorItens" onclick="carregaItem(event, 'Opcao5')">Opcao5</button>
+          </div>
+          <article>
+              <div id="Opcao1" class="vetorConteudo">
+                <h3>Opcao1</h3>
+                <p>Texto que aparece se for escolhida a primeira opção.</p>
+              </div>
+              <div id="Opcao2" class="vetorConteudo">
+                <h3>Opcao2</h3>
+                <p>Texto que aparece se for escolhida a segunda opção.</p> 
+              </div>
+              <div id="Opcao3" class="vetorConteudo">
+                <h3>Opcao3</h3>
+                <p>Texto que aparece se for escolhida a terceira opção.</p>
+              </div>
+              <div id="Opcao4" class="vetorConteudo">
+                <h3>Opcao4</h3>
+                <p>Texto que aparece se for escolhida a quarta opção.</p>
+              </div>
+              <div id="Opcao5" class="vetorConteudo">
+                <h3>Opcao5</h3>
+                <p>Texto que aparece se for escolhida a quinta opção.</p>
+              </div>
+            </article>
+      </section>
+      <aside>
+          <h2>Título da coluna flutuante</h2>
+          <p>Neste exemplo, a tag aside é utilizada para criar a coluna flutuante na lateral direita, enquanto.</p>
+      </aside>
+    </div>  
+  </body>
+</html>
+
+

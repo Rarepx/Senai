@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Conversor de Moeda</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="js/app.js" defer></script>
+</head>
+
+<body ng-app="minhaAplicacao">
+    <div ng-controller="conversorController">
+        <h2>Conversor de Moeda</h2>
+        <label for="valor">Valor:</label>
+        <input type="text" id="valor" ng-model="valor" placeholder="Insira um valor">
+
+        <label for="opcaoMoeda">Escolha a Moeda:</label>
+        <select id="opcaoMoeda" ng-model="opcaoMoeda" ng-options="opcao for opcao in ['Real - Dólar', 'Real - Euro']">
+        </select>
+
+        <button ng-click="converterMoeda()">Converter</button>
+
+        <p>Resultado em Reais: {{ resultado }}</p>
+    </div>
+</body>
+</html>

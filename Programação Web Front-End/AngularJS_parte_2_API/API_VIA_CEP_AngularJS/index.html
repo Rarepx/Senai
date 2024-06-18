@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ViaCEP Webservice</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="js/app.js" defer></script>
+</head>
+
+<body ng-app="minhaAplicacao" ng-controller="meuController">
+    <form method="get" action=".">
+        <label>Cep:
+            <input name="cep" type="text" ng-model="endereco.cep" id="cep" value="" size="10" maxlength="9"
+                ng-click="limparCampos()" />
+        </label>
+        <button type="button" ng-click="verificarCep()">Verificar</button><br />
+        <label>Rua:
+            <input name="rua" type="text" ng-model="endereco.rua" id="rua" size="60" />
+        </label><br />
+        <label>Bairro:
+            <input name="bairro" type="text" ng-model="endereco.bairro" id="bairro" size="40" />
+        </label><br />
+        <label>Cidade:
+            <input name="cidade" type="text" ng-model="endereco.cidade" id="cidade" size="40" />
+        </label><br />
+        <label>Estado:
+            <input name="uf" type="text" ng-model="endereco.uf" id="uf" size="2" />
+        </label><br />
+    </form>
+</body>
+
+</html>

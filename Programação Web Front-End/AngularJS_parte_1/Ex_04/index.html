@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="js/app.js"></script>
+</head>
+
+<body ng-app="minhaAplicacao">
+  <h4>Filtrar Países por Continente:</h4>
+  <div ng-controller="meuController">
+    <!-- Entrada do usuário para inserir o continente -->
+    <label for="continente">Digite o continente:</label>
+    <input type="text" id="continente" ng-model="filtroContinente">
+
+    <!-- Lista de países filtrada por continente -->
+    <ul>
+      <li ng-repeat="pais in paises | filter: {continente: filtroContinente}">
+        {{pais.nome}} - {{pais.continente}}
+      </li>
+    </ul>
+  </div>  
+</body>
+
+</html>

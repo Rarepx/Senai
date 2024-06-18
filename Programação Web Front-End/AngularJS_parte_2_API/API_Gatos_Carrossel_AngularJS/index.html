@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+    <script src="js/app.js" defer></script>
+</head>
+<body ng-app="minhaAplicacao" ng-controller="meuController">
+    <h3>Selecione uma Raça</h3>
+    <select class="racas" ng-model="racaSelecionada" ng-options="raca.id as raca.name for raca in racas" ng-change="obterImagensGato()"></select>
+
+    <div id="carouselExampleRide" class="carousel slide" data-bs-ride="carousel" style="width: 50%;" ng-show="imagens.length > 0">
+        <div class="carousel-inner">
+            <div class="carousel-item" ng-repeat="imagem in imagens" ng-class="{ 'active': $index === 0 }">
+                <img ng-src="{{imagem.url}}" alt="Imagem {{$index + 1}}" style="width: 100%; height: 400px;">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+    </div>
+</body>
+</html>

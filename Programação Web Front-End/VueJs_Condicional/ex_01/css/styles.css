@@ -1,0 +1,14 @@
+#app {
+    border: dashed black 1px;
+    width: 300px;
+    padding: 20px;
+  }
+  
+  .valid {
+    color: green;
+  }
+  
+  .invalid {
+    color: red;
+  }
+  

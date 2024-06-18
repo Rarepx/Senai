@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+
+<div id="app">
+  <h1>Lista de Tarefas</h1>
+  
+  <div>
+    <label for="nome">Nome da Tarefa:</label>
+    <input type="text" id="nome" v-model="novaTarefa.nome">
+    <label for="descricao">Descrição:</label>
+    <input type="text" id="descricao" v-model="novaTarefa.descricao">
+    <button v-on:click="adicionarTarefa">Adicionar Tarefa</button>
+  </div>
+  
+  <div>
+    <button v-on:click="toggleVisibilidadeConcluidas">Visualizar Tarefas Concluídas</button>
+  </div>
+
+  <ul>
+    <li v-for="tarefa in tarefas" v-on:key="tarefa.id" v-show="tarefa.visivel">
+      <span>{{ tarefa.nome }} - {{ tarefa.descricao }}</span>
+      <button v-on:click="concluirTarefa(tarefa)">Concluir</button>
+      <button v-on:click="removerTarefa(tarefa)">Remover</button>
+    </li>
+  </ul>
+</div>
+
+</body>
+</html>

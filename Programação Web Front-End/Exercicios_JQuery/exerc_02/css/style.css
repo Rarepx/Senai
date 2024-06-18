@@ -1,0 +1,168 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  font-size: 18px;
+  font-family: "Lato", sans-serif;
+  font-weight: normal;
+  line-height: 1.5; /* Espaçamento entre as linhas padrão */
+  color: #666;
+}
+
+/*menu nav ini*/
+.navbar {
+  width: 100%;
+  background-color:#3a3a3a;
+  opacity:0.7;
+  /* A propriedade overflow especifica se o conteúdo 
+  deve ser recortado ou adicionado barras de rolagem 
+  quando o conteúdo de um elemento for muito grande 
+  para caber na área especificada.
+  auto - Semelhante ao scroll, mas adiciona barras de 
+  rolagem somente quando necessário.
+  */
+  overflow: auto;
+  position: fixed;
+  z-index: 1;
+  /* overflow: hidden; */
+}
+
+.navbar a {
+  float: left;
+  /*text-align: center;*/
+  padding: 12px;
+  color:#fff;
+  /*width: 23%;*/
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: #000;
+  border-bottom: 2px solid #fff;
+}
+
+.navbar a.dividir {
+  float: right;
+  color:#fff;
+}
+/*menu nav fim*/
+
+.primeiraImagem, .segundaImagem, .terceiraImagem, .quartaImagem{
+  /* O elemento é posicionado em 
+  relação à sua posição norma */
+  position:relative;
+  /* opacity:0.70; */
+  background-position:center;
+  /* Especifique o tamanho de uma imagem de fundo
+  Redimensione a imagem de fundo para cobrir 
+  todo o contêiner, mesmo que seja necessário 
+  esticar a imagem */
+  background-size:cover;
+
+  /*define se/como uma imagem de fundo será repetida.*/
+  background-repeat:no-repeat;
+  
+  /*
+    Define se uma imagem de plano de fundo rola com
+    o restante da página ou é fixa.
+      
+    fixed = parallax
+     scroll = normal
+  */
+  background-attachment:fixed;
+}
+  
+.primeiraImagem{
+  background-image:url('../img/image1.jpg');
+  min-height:100%;
+}
+  
+.segundaImagem{
+  background-image:url('../img/image2.jpg');
+  min-height:460px;
+}
+  
+.terceiraImagem{
+  background-image:url('../img/image3.jpg');
+  min-height:460px;
+}
+  
+.quartaImagem{
+  background-image:url('../img/image4.jpg');
+  min-height:460px;
+}
+  
+.secao{
+  text-align:center;
+  padding:20px 60px;
+}
+  
+.secaoClara{
+  background-color:#f4f4f4;
+  color:#666;
+}
+  
+.secaoEscura{
+  background-color:#282e34;
+  color:#ddd;
+}
+  
+.texto{
+  /* position:absolute o elemento é posicionado 
+  em relação ao seu primeiro elemento 
+  ancestral posicionado*/
+  position:absolute;
+  top:50%;
+  width:100%;
+  text-align:center;
+  color:#000;
+  font-size:27px;
+  letter-spacing:8px;
+  text-transform:uppercase;
+  opacity:0.70;
+}
+ 
+.rotulo{
+  background-color:#111;
+  color:#fff;
+  padding:20px;
+}
+
+#irParaTopo {
+  /* text-decoration: none; */
+  /* font-size: 30px; */
+  padding: 10px;
+  /* font-family: sans-serif; */
+  /* color: #fff;  */
+  /* background: #000; */
+  background: none;
+  float: right;
+  border-radius: 10%; 
+  position: absolute; 
+  bottom: 10px;
+  right: 10px;
+}
+
+.botao-ir-para-topo {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  display: none; /* Inicialmente oculto */
+}
+
+#imagemSeta{
+  width: 35px;
+  height: 35px;
+}
+
+@media(max-width:568px){
+  .primeiraImagem, .segundaImagem, .terceiraImagem, .quartaImagem{
+    background-attachment:scroll;
+  }
+
+  .navbar a{
+    float: none;
+    display: block;
+  }
+}

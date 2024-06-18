@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Agenda de Contatos</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="js/app.js" defer></script>
+</head>
+
+<body ng-app="minhaAplicacao" ng-controller="contatosController">
+
+    <h2>Agenda de Contatos</h2>
+
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" ng-model="novoContato.nome" placeholder="Digite o nome">
+
+    <label for="telefone">Telefone:</label>
+    <input type="text" id="telefone" ng-model="novoContato.telefone" placeholder="Digite o telefone">
+
+    <button ng-click="adicionarContato()">Adicionar Contato</button>
+
+    <ul>
+        <li ng-repeat="contato in listaContatos">
+            {{ contato.nome }} - {{ contato.telefone }}
+            <button ng-click="removerContato($index)">Remover</button>
+        </li>
+    </ul>
+
+</body>
+
+</html>

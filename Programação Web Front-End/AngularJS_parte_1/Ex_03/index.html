@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="minhaAplicacao">
+
+<head>
+  <meta charset="UTF-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="js/app.js"></script>
+</head>
+
+<body ng-controller="meuController">
+  <p>Lista de Livros:</p>
+  <ul>
+    <li ng-repeat="livro in livros">
+      {{livro.titulo}} - {{livro.autor}} ({{livro.ano}})
+    </li>
+  </ul>
+</body>
+
+</html>

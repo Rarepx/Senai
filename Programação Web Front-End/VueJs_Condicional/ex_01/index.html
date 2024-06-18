@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+
+<div id="app">
+  <input type="text" v-model="texto" placeholder="Digite algo...">
+  <p v-if="texto.length > 5" class="valida">Texto válido</p>
+  <p v-else class="invalida">Texto inválido</p>
+</div>
+
+</body>
+</html>

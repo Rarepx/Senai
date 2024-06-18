@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Tarefas</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="js/app.js" defer></script>
+</head>
+
+<body ng-app="minhaAplicacao">
+    <div ng-controller="listaTarefasController">
+        <h2>Lista de Tarefas</h2>
+
+        <label for="novaTarefa">Nova Tarefa:</label>
+        <input type="text" id="novaTarefa" ng-model="novaTarefa" placeholder="Digite uma nova tarefa">
+
+        <button ng-click="adicionarTarefa()">Adicionar Tarefa</button>
+
+        <ul>
+            <li ng-repeat="tarefa in listaTarefas">
+                {{ tarefa }}
+                <button ng-click="removerTarefa($index)">Remover</button>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

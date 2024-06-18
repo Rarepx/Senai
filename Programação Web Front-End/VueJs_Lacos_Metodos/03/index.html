@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+
+<div id="app">
+  <ul>
+    <!-- 
+      v-for="disciplina in disciplinas": Utiliza a diretiva 
+      v-for para iterar sobre cada elemento na lista disciplinas, 
+      atribuindo cada elemento à variável temporária disciplina.
+
+      :key="disciplina.id": A diretiva :key é utilizada para 
+      fornecer uma chave única a cada item no loop. Isso ajuda 
+      o Vue a identificar os elementos da lista e otimizar as 
+      atualizações do DOM.
+
+      @click="exibirDisciplina(disciplina)": Define um ouvinte 
+      de evento para o evento de clique. Quando um item da lista 
+      é clicado, a função exibirDisciplina é chamada com 
+      o argumento disciplina.
+
+      {{ disciplina.nome }}: Exibe o nome da disciplina. Este 
+      conteúdo será renderizado para cada item na lista.
+    -->  
+    <li v-for="disciplina in disciplinas" :key="disciplina.id" @click="exibirDisciplina(disciplina)">
+      {{ disciplina.nome }}
+    </li>
+  </ul>
+  <p v-if="disciplinaSelecionada">
+    {{ disciplinaSelecionada.descricao }}
+  </p>
+</div>
+
+</body>
+</html>
